@@ -13,7 +13,9 @@ const Explainer = () => {
   const handleSummarizeClick = () => {
     setLoading(true);
     axios
-      .post("http://localhost:5050/api/summary", { text: inputText })
+      .post("https://textxtract-backend.onrender.com/api/summary", {
+        text: inputText,
+      })
       .then((response) => {
         setSummary(response.data.summary);
         setLoading(false);
