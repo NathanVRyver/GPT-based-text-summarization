@@ -2,7 +2,7 @@ import React from "react";
 import Feature from "../../components/feature/Feature";
 import "./about.css";
 
-export default function About()(
+export default function AboutSection() {
   <div className="gpt3__whatgpt3 section__margin" id="xtract-about">
     <div className="gpt3__whatgpt3-feature">
       <Feature
@@ -30,6 +30,5 @@ export default function About()(
         text=" Get accurate and comprehensive summaries every time with the power of GPT-based technology. Trust TextXtract to give you the information you need in a concise and digestible format."
       />
     </div>
-  </div>
-);
-
+  </div>;
+}
