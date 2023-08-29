@@ -3,6 +3,7 @@ import Feature from "../../components/feature/Feature";
 import "./about.css";
 
 export default function AboutSection() {
+  // trigger redeployment
   return (
     <div className="gpt3__whatgpt3 section__margin" id="xtract-about">
       <div className="gpt3__whatgpt3-feature">
