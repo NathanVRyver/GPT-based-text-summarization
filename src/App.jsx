@@ -5,7 +5,6 @@ import {
   Footer,
   Header,
   Possibility,
-  AboutSection,
   Faq,
   Contact,
 } from "./containers";
@@ -20,7 +19,6 @@ const App = () => {
         <Header />
       </div>
       <Brand />
-      <AboutSection />
       <Features />
       <ScrollToTopButton />
       <Possibility />
