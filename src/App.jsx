@@ -5,7 +5,7 @@ import {
   Footer,
   Header,
   Possibility,
-  About,
+  AboutSection,
   Faq,
   Contact,
 } from "./containers";
@@ -20,7 +20,7 @@ const App = () => {
         <Header />
       </div>
       <Brand />
-      <About />
+      <AboutSection />
       <Features />
       <ScrollToTopButton />
       <Possibility />
