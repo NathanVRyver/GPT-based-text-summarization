@@ -17,6 +17,7 @@ const Explainer = () => {
         text: inputText,
       })
       .then((response) => {
+        console.log(response);
         setSummary(response.data.summary);
         setLoading(false);
       })
