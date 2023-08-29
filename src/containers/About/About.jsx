@@ -2,7 +2,7 @@ import React from "react";
 import Feature from "../../components/feature/Feature";
 import "./about.css";
 
-const About = () => (
+export default function About()(
   <div className="gpt3__whatgpt3 section__margin" id="xtract-about">
     <div className="gpt3__whatgpt3-feature">
       <Feature
@@ -33,4 +33,3 @@ const About = () => (
   </div>
 );
 
-export default About;
