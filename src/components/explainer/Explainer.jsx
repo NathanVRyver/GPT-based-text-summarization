@@ -3,7 +3,8 @@ import axios from 'axios';
 import './explainer.css';
 
 const Explainer = () => {
-  const [inputText, setInputText] = useState('');
+	const [annoucement, setAnnoucement] = useState(false);
+	const [inputText, setInputText] = useState('');
   const [summary, setSummary] = useState('');
   const [loading, setLoading] = useState(false);
   const handleInputChange = (event) => {
@@ -64,7 +65,7 @@ const Explainer = () => {
           <div className="button_container">
             <button
               className="demo__submit"
-              onClick={handleSummarizeClick}
+              onClick={() => { setAnnoucement(true)}}
               disabled={loading}
             >
               {loading ? 'Loading...' : 'Summarize'}
@@ -72,7 +73,9 @@ const Explainer = () => {
           </div>
         </div>
       </div>
-      {/* THe summary section starts here*/}
+      {/* The summary section starts here*/}
+
+	  {annoucement && <h1 className="annoucement-header"> This service is currently offline, but you can view the repository <a target="_blank"  href="https://github.com/NathanVRyver/GPT-based-text-summarization"> here </a></h1>}
       {summary && (
         <div className="demo__summary">
           <div className="gradient__text">

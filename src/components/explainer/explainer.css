@@ -1,3 +1,15 @@
+.annoucement-header
+{
+	font-size: 17px;
+	text-align: center;
+	font-family: Inter;
+	color: white;
+}
+
+.annoucement-header a {
+color: red;
+font-weight: bold;
+}	
 .demo__page-layout {
   padding: 20px;
 }
