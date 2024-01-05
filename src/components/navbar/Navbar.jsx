@@ -23,9 +23,6 @@ const Navbar = () => {
           offset={-70}
           duration={100}
         >
-          <p>
-            <a href="#wgpt3"></a>About
-          </p>
         </ScrollLink>
         <ScrollLink
           activeClass="active"

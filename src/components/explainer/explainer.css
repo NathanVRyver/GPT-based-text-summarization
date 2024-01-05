@@ -5,10 +5,15 @@
   display: grid;
   margin: 30px;
   padding: 30px;
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
 }
-
+@media only screen and (max-width: 600px) {
+.demo__grid{
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+}
+}
 .demo__headline {
   color: linear-gradient(
     132deg,
@@ -41,10 +46,10 @@
 }
 .demo__text {
   background-color: var(--input-bg);
-  padding: 10px;
+  padding: 18px;
   font-size: 16px;
   border: 1px solid #cccccc00;
-  border-radius: 4px;
+  border-radius: 30px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
   height: 400px;
   max-width: 500px;

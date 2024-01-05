@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import axios from "axios";
-import "./explainer.css";
+import React, {useState} from 'react';
+import axios from 'axios';
+import './explainer.css';
 
 const Explainer = () => {
-  const [inputText, setInputText] = useState("");
-  const [summary, setSummary] = useState("");
+  const [inputText, setInputText] = useState('');
+  const [summary, setSummary] = useState('');
   const [loading, setLoading] = useState(false);
   const handleInputChange = (event) => {
     setInputText(event.target.value);
@@ -13,18 +13,18 @@ const Explainer = () => {
   const handleSummarizeClick = () => {
     setLoading(true);
     axios
-      .post("https://textxtract-backend.onrender.com/api/summary", {
-        text: inputText,
-      })
-      .then((response) => {
-        console.log(response);
-        setSummary(response.data.summary);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
+        .post('https://textxtract-backend.onrender.com/api/summary', {
+          text: inputText,
+        })
+        .then((response) => {
+          console.log(response);
+          setSummary(response.data.summary);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        });
   };
 
   return (
@@ -33,7 +33,7 @@ const Explainer = () => {
         <div className="demo__grid-column-1">
           <div className="demo__headline">
             <h1 className="gradient__text">
-              {" "}
+              {' '}
               TextXtract: Generate Summaries of Long Texts with AI
             </h1>
           </div>
@@ -45,10 +45,10 @@ const Explainer = () => {
             just a few sentences. Whether you're a student, researcher, or just
             a busy professional, TextXtract is the perfect tool to save time and
             stay on top of your reading.<br></br>
-            <br />{" "}
+            <br />{' '}
             <strong>
               Try it today and experience the power of GPT-based text
-              summarization!{" "}
+              summarization!{' '}
             </strong>
           </p>
         </div>
@@ -67,7 +67,7 @@ const Explainer = () => {
               onClick={handleSummarizeClick}
               disabled={loading}
             >
-              {loading ? "Loading..." : "Summarize"}
+              {loading ? 'Loading...' : 'Summarize'}
             </button>
           </div>
         </div>
