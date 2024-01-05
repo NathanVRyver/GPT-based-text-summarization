@@ -32,7 +32,7 @@ const Footer = () => (
       </div>
 
       <div className="gpt3__footer-copyright">
-        <p>@2023 TextXtract. All rights reserved.</p>
+        <p>@2024 TextXtract. Built by Ryver</p>
       </div>
     </div>
   </>
