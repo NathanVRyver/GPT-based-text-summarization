@@ -65,7 +65,7 @@ const Explainer = () => {
           <div className="button_container">
             <button
               className="demo__submit"
-              onClick={() => { setAnnoucement(true)}}
+              onClick={handleSummarizeClick}
               disabled={loading}
             >
               {loading ? 'Loading...' : 'Summarize'}
