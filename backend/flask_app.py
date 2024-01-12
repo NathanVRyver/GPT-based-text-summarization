@@ -3,8 +3,7 @@ from transformers import T5Tokenizer, T5ForConditionalGeneration
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
-
+CORS(app, resources={r'/api/summary': {'origins': 'https://gpt-based-text-summarization.vercel.app/'}})
 model = T5ForConditionalGeneration.from_pretrained('t5-small')
 tokenizer = T5Tokenizer.from_pretrained('t5-small', model_max_length=1024)
 
