@@ -1,3 +1,0 @@
-Implement new feature to customize the summarizing options 
-
-we fixed the api bug by changing the server on the front-end in the explainer component, and then we installed flask-cors and added the header code on the backend source code 
