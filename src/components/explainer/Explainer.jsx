@@ -28,6 +28,40 @@ const Explainer = () => {
         });
   };
 
+const handlesummarizebuttonclick = () => {
+ setLoading(true);
+const key = import.meta.env.VITE_OPENAI_API;
+const options = {
+  method: "POST",
+  url: "https://api.edenai.run/v2/text/summarize",
+  headers: {
+        authorization: `Bearer ${key}`,
+  },
+  data: {
+    output_sentences: 3,
+    providers: "openai",
+    text: inputText,
+    language: "en",
+    fallback_providers: "",
+  },
+};
+
+axios
+  .request(options)
+  .then((response) => {
+      setSummary(response.data.openai.result);
+      setLoading(false);
+      })
+  .catch((error) => {
+    console.error(error);
+  setLoading(false); }); 
+
+
+  }
+
+
+
+
   return (
     <div className="demo__page-layout">
       <div className="demo__grid">
@@ -65,7 +99,7 @@ const Explainer = () => {
           <div className="button_container">
             <button
               className="demo__submit"
-              onClick={handleSummarizeClick}
+              onClick={handlesummarizebuttonclick}
               disabled={loading}
             >
               {loading ? 'Loading...' : 'Summarize'}
